@@ -11,6 +11,9 @@ class Person:
     def can_match_18(self):
         return self.age == "ADULT"
     
+    def can_match_minor_only(self):
+        return self.age == "MINOR"
+    
     def set_current_match(self, work_id):
         self.current_match = work_id
 
@@ -44,8 +47,11 @@ class Work:
     def has_match(self):
         return self.current_match is not None
     
-    def can_match_u18(self):
-        return self.work_age != "ADULT"
+    def is_minor_only(self):
+        return self.work_age == "MINOR"
+    
+    def is_adult_only(self):
+        return self.work_age == "ADULT"
     
     def __str__(self):
         if self.has_match():
