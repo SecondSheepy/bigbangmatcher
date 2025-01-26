@@ -1,4 +1,6 @@
-import tui as tui
+import match_objects as mo
+import google_api_calls as gac
 
-def main():
-    tui.run()
+creds = gac.get_creds()
+gac.make_claims_form(creds, 3, "Discord", True, "Test Form")
+gac.make_submissions_form(creds, 3, "Discord", True, "Test Form")

@@ -48,10 +48,10 @@ class Work:
         return self.current_match is not None
     
     def is_minor_only(self):
-        return self.work_age == "MINOR"
+        return self.work_age == "MINORS ONLY"
     
     def is_adult_only(self):
-        return self.work_age == "ADULT"
+        return self.work_age == "ADULTS ONLY"
     
     def __str__(self):
         if self.has_match():
